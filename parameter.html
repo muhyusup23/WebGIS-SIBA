@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGIS SIBA</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-nav">
+        <img src="assets/image/Logo.png" alt="Logo SIBA" class="logo" />
+
+        <input type="checkbox" id="check" />
+
+        <label for="check" class="icon">
+          <i class="bx bx-menu" id="icon-menu"></i>
+          <i class="bx bx-x" id="icon-close"></i>
+        </label>
+
+        <nav class="navbar">
+          <a href="index.html" style="--i: 0">Home</a>
+          <a href="parameter.html" style="--i: 1" class="active">Parameter</a>
+          <a href="mitigasi.html" style="--i: 2">Mitigasi</a>
+          <a href="webgis.html" style="--i: 3">WebGIS</a>
+        </nav>
+      </div>
+      <div class="hero" data-aos="zoom-in-up" data-aos-duration="1000">
+        <div class="container">
+          <div class="ht-hero">
+            <h2>P</h2>
+            <h2>A</h2>
+            <h2>R</h2>
+            <h2>A</h2>
+            <h2>M</h2>
+            <h2>E</h2>
+            <h2>T</h2>
+            <h2>E</h2>
+            <h2>R</h2>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec-odd">
+        <div class="container" data-aos="fade-right" data-aos-duration="1000">
+          <h1>Parameter bahaya tsunami</h1>
+          <p>
+            Paremeter yang digunakan dalam pemodelan zona bahaya tsunami di Pesisir Kabupaten Cianjur mengacu pada jurnal penelitian yang dilakukan oleh Faiqoh dkk., (2013) dengan judul “Vulnerability Level Map of Tsunami Disaster in
+            Pangandaran Beach, West Java”. Sedangkan, penentuan titik dan jalur evakuasi tsunami berdasarkan acuan dari BNPB (2013) dan Sea Defence Consultants (SDC) Tahun 2007. Ada beberapa point penting sebagai berikut:
+          </p>
+          <ol>
+            <li>Parameter zona bahaya tsunami ada empat meliputi ketinggian daratan (elevasi), kemiringan lereng (slope), jarak dari sungai, dan jarak dari garis pantai.</li>
+            <li>Penentuan zona bahaya tsunami dan zona aman tsunami didasarkan pada ketinggian daratan dengan batasan ≥ 20 m.</li>
+            <li>Penentuan zona aman (elevasi ≥ 20 m) diambil Berdasarkan indunasi tsunami yang dapat terjadi di Selatan Pulau Jawa (Widiyantoro dkk., 2020).</li>
+            <li>Zona bahaya tsunami kemudian diklasifikasikan menjadi 3 kelas, yakni zona bahaya rendah, zona bahaya sedang, dan zona bahaya tinggi.</li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <p data-aos="fade-right" data-aos-duration="1000">Berikut tampilan peta tiap parameter:</p>
+          <div class="container-im">
+            <div class="box-im" data-aos="zoom-in" data-aos-duration="1000">
+              <picture>
+                <img src="assets/image/1 - KD.png" alt="Peta Ketinggian Daratan Pesisir Kabupaten Cianjur" class="thumbnail" />
+                <figcaption>Peta Ketinggian Daratan</figcaption>
+              </picture>
+            </div>
+            <div class="box-im" data-aos="zoom-in" data-aos-duration="1000">
+              <picture>
+                <img src="assets/image/2 - KL.png" alt="Peta Kemiringan Lereng Pesisir Kabupaten Cianjur" class="thumbnail" />
+                <figcaption>Peta Kemiringan Lereng</figcaption>
+              </picture>
+            </div>
+            <div class="box-im" data-aos="zoom-in" data-aos-duration="1000">
+              <picture>
+                <img src="assets/image/3 - JS.png" alt="Peta Jarak dari Sungai Pesisir Kabupaten Cianjur" class="thumbnail" />
+                <figcaption>Peta Jarak dari Sungai</figcaption>
+              </picture>
+            </div>
+            <div class="box-im" data-aos="zoom-in" data-aos-duration="1000">
+              <picture>
+                <img src="assets/image/4 - JP.png" alt="Peta Jarak dari Garis Pantai Pesisir Kabupaten Cianjur" class="thumbnail" />
+                <figcaption>Peta Jarak dari Garis Pantai</figcaption>
+              </picture>
+            </div>
+
+            <div class="modal">
+              <span class="close">&times;</span>
+              <img class="modal-content" id="fullImage" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sec-odd">
+        <div class="container">
+          <h1 data-aos="fade-up" data-aos-duration="1000">Penentuan Shelter dan Jalur Evakuasi</h1>
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <p>Berikut kriteria yang telah ditetapkan untuk penentuan shelter evakuasi tsunami:</p>
+            <ol>
+              <li>Bangunan atau tempat yang akan dijadikan titik evakuasi harus <mark>berada di lokasi yang aman dari bahaya tsunami</mark>.</li>
+              <li>Lokasi shelter evakuasi harus berada pada wilayah yang <mark>memiliki ketinggian lebih dari 20 meter dari permukaan air laut</mark>.</li>
+              <li>
+                Bangunan atau tempat yang akan dijadikan titik evakuasi harus memenuhi kriteria dari <mark>escape building</mark> . Beberepa bangunan fasilitas umum dan sosial yang memenuhi kategori escape building adalah tempat ibadah,
+                pendidikan, kantor pemerintahan, fasilitas kesehatan, dan bangunan serta guna. Selain itu juga, lapangan olahraga menjadi salah satu tempat yang memenuhi kategori escape building.
+              </li>
+              <li>Bangunan atau tempat yang akan dijadikan titik evakuasi harus <mark>memiliki daya tampung yang cukup</mark> untuk menampung penduduk yang ada di zona tinggi bahaya tsunami.</li>
+            </ol>
+          </div>
+          <br />
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <p>
+              Sementera untuk jalur evakuasi, pembuatan jalur evakuasi memanfaatkan salah satu metode SIG, yakni metode <i>Network Analysis</i>. Penentuan jalur evakuasi ini tidaklah sembarangan dan harus memperhatikan beberapa hal seperti
+              berikut:
+            </p>
+            <ol>
+              <li>Jalur evakuasi yang direncanakan harus <mark>menjauh dari garis pantai</mark>.</li>
+              <li>
+                Jalur evakuasi yang direncanakan harus memperhatikan aspek lebar jalan. Jalan yang ideal dalam segala situasi adalah <mark>jalan memiliki lebar 6 meter atau lebih</mark>.
+                <b>Akan tetapi, jalan dengan lebar < 6 m juga bisa dijadikan jalur evakuasi pada situasi tertentu.</b>
+              </li>
+              <li>
+                Jalur evakuasi yang direncanakan <mark>harus memperhatikan aspek jarak dan waktu tempuh untuk mencapai titik evakuasi</mark>. Waktu tempuh kedatangan tsunami di Selatan Pulau Jawa membutuhkan waktu 20 menit agar dapat
+                mencapai bibir pantai. Sedangkan, kecepatan pergerakan yakni 1,07 m/s yang mengacu pada asumsi kecepatan rata-rata orang yang berjalan kaki.
+              </li>
+              <li>Jalur evakuasi yang direncanakan harus <mark>memperhatikan aspek aksesibilitas</mark>. Aksesibilitas dinilai dari jenis perkerasan jalan dan kondisinya.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-dis">
+      <div class="footer-left" data-aos="zoom-in" data-aos-duration="1000">
+        <h2>WebGIS <span>SIBA</span></h2>
+        <p class="footer-links"><a href="index.html">Home</a> | <a href="parameter.html">Parameter</a> | <a href="mitigasi.html">Mitigasi</a> | <a href="webgis.html">WebGIS</a></p>
+        <p class="copyright">&copy; Copyright 2024 <strong>SIBA</strong>. All rights reserved</p>
+      </div>
+
+      <div class="footer-center" data-aos="zoom-in" data-aos-duration="1000">
+        <div>
+          <a href="https://maps.app.goo.gl/PJ5yNtnxaceBBCS2A" target="_blank"><i class="bx bxs-location-plus"></i></a>
+          <p><span>Setiabudhi, Kota Bandung</span> Jawa Barat, Indonesia</p>
+        </div>
+        <div>
+          <a href="tel:+6285759200639" target="_blank"> <i class="bx bxs-phone"></i></a>
+          <p>+6285759200639</p>
+        </div>
+        <div>
+          <a href="mailto:muhammadyusup23@upi.edu" target="_blank"><i class="bx bx-envelope"></i></a>
+          <p>muhammadyusup23@upi.edu</p>
+        </div>
+      </div>
+
+      <div class="footer-right" data-aos="zoom-in" data-aos-duration="1000">
+        <p class="footer-about">
+          <span>About</span>
+          <strong>SIBA</strong> adalah web berbasis GIS atau WebGIS yang diperuntuhkan untuk melihat sebaran zona bahaya tsunami di Pesisir Selatan Kabupaten Cianjur berserta titik shelter dan jalur evakuasi.
+        </p>
+        <div class="footer-media">
+          <a href="https://www.instagram.com/yusup23_muh/" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/muhyusup/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

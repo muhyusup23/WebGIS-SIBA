@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGIS SIBA</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-nav">
+        <img src="assets/image/Logo.png" alt="Logo SIBA" class="logo" />
+
+        <input type="checkbox" id="check" />
+
+        <label for="check" class="icon">
+          <i class="bx bx-menu" id="icon-menu"></i>
+          <i class="bx bx-x" id="icon-close"></i>
+        </label>
+
+        <nav class="navbar">
+          <a href="index.html" style="--i: 0" class="active">Home</a>
+          <a href="parameter.html" style="--i: 1">Parameter</a>
+          <a href="mitigasi.html" style="--i: 2">Mitigasi</a>
+          <a href="webgis.html" style="--i: 3">WebGIS</a>
+        </nav>
+      </div>
+      <div class="hero" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-easing="ease-in">
+        <div class="container">
+          <h1 class="welcome">Selamat datang di SIBA</h1>
+          <p>
+            Sistem Informasi Bahaya Tsunami <br />
+            di Pesisir Selatan Kabupaten Cianjur
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="sec-odd" data-aos="fade-right" data-aos-duration="1000">
+        <div class="container">
+          <h1>About</h1>
+          <p>
+            <strong>SIBA</strong> adalah singkatan dari Sistem Informasi Bahaya Tsunami yang merupakan web berbasis GIS atau WebGIS yang diperuntuhkan untuk melihat sebaran zona bahaya tsunami di Pesisir Selatan Kabupaten Cianjur (terdiri
+            dari Kecamatan Agrabinta, Kecamatan Sindangbarang, dan Kecamatan Cidaun). Zona bahaya tsunami terbagi menjadi 3 klasifikasi, yakni zona bahaya rendah, zona bahaya sedang, zona bahaya tinggi, serta ada zona aman tsunami. Selain
+            itu, ditampilkan juga informasi mengenai titik shelter dan jalur evakuasi. Adanya WebGIS ini diharapkan dapat menjadi salah satu pengingat bagi masyarakat Pesisir Selatan Kabupaten Cianjur agar lebih waspada serta meningkatkan
+            kesiapsiagaan terhadap bencana tsunami sehingga kerugian moril ataupun materil dapat diminimalisasi.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <h1>Faq</h1>
+          <div class="content" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="header-accor">Apa tujuan dibuatnya SIBA?</div>
+            <div class="body-accor">
+              <div class="body-accor-content">Sebagai sarana informasi sebaran bahaya tsunami guna meningkatkan kewaspadaan masyarakat terhadap bencana tersebut.</div>
+            </div>
+          </div>
+          <div class="content" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="header-accor">Fitur apa saja yang terdapat di SIBA?</div>
+            <div class="body-accor">
+              <div class="body-accor-content">
+                Setidaknya ada tiga fitur di SIBA, yang terdiri dari: <br />
+                <ol>
+                  <li>Parameter, untuk melihat parameter apa saja yang digunakan dalam pembuatan zona bahaya tsunami.</li>
+                  <li>Mitigasi, sebagai portal untuk memberikan edukasi bahaya tsunami kepada masyarakat yang meliputi pra, saat, dan pasca kejadian.</li>
+                  <li>WebGIS, berisi sebaran bahaya tsunami, titik shelter, dan jalur evakuasi yang bisa digunakan.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <div class="content" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="header-accor">Bagaimana cara menggunakan WebGIS?</div>
+            <div class="body-accor">
+              <div class="body-accor-content">
+                <ol>
+                  <li>Buka menu webgis</li>
+                  <li>Aktifkan lokasi dan tekan tombol current location Anda akan melihat zona bahaya apa yang ada di lokasi Anda sekarang</li>
+                  <li>Untuk melihat sebaran shelter aktifkan layer shelter dan Anda bisa menekan titik shelter untuk melihat informasi yang dibutuhkan</li>
+                  <li>Untuk melihat jalur evakuasi aktifkan layer jalur evakuasi</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-dis">
+      <div class="footer-left" data-aos="zoom-in" data-aos-duration="1000">
+        <h2>WebGIS <span>SIBA</span></h2>
+        <p class="footer-links"><a href="index.html">Home</a> | <a href="parameter.html">Parameter</a> | <a href="mitigasi.html">Mitigasi</a> | <a href="webgis.html">WebGIS</a></p>
+        <p class="copyright">&copy; Copyright 2024 <strong>SIBA</strong>. All rights reserved</p>
+      </div>
+
+      <div class="footer-center" data-aos="zoom-in" data-aos-duration="1000">
+        <div>
+          <a href="https://maps.app.goo.gl/PJ5yNtnxaceBBCS2A" target="_blank"><i class="bx bxs-location-plus"></i></a>
+          <p><span>Setiabudhi, Kota Bandung</span> Jawa Barat, Indonesia</p>
+        </div>
+        <div>
+          <a href="tel:+6285759200639" target="_blank"> <i class="bx bxs-phone"></i></a>
+          <p>+6285759200639</p>
+        </div>
+        <div>
+          <a href="mailto:muhammadyusup23@upi.edu" target="_blank"><i class="bx bx-envelope"></i></a>
+          <p>muhammadyusup23@upi.edu</p>
+        </div>
+      </div>
+
+      <div class="footer-right" data-aos="zoom-in" data-aos-duration="1000">
+        <p class="footer-about">
+          <span>About</span>
+          <strong>SIBA</strong> adalah web berbasis GIS atau WebGIS yang diperuntuhkan untuk melihat sebaran zona bahaya tsunami di Pesisir Selatan Kabupaten Cianjur berserta titik shelter dan jalur evakuasi.
+        </p>
+        <div class="footer-media">
+          <a href="https://www.instagram.com/yusup23_muh/" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/muhyusup/" target="_blank"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
