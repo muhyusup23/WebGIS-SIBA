@@ -149,6 +149,13 @@ var legend = L.control
         weight: 2,
       },
       {
+        label: "Pemukiman",
+        type: "rectangle",
+        color: "#ffa6b8",
+        fillColor: "#ffa6b8",
+        weight: 2,
+      },
+      {
         label: "Bahaya Tsunami",
         type: "rectangle",
         color: "#ffffff",
@@ -383,6 +390,17 @@ var adminDesa = L.geoJSON(adminDesa, {
   },
 });
 
+// Polygon Pemukiman
+var pemukiman = L.geoJSON(pemukiman, {
+  style: {
+    fillColor: "#ffa6b8",
+    color: "#ffa6b8",
+    opacity: 1,
+    fillOpacity: 0.7,
+    weight: 0.1,
+  },
+});
+
 // Polygon Bahaya Tsunami
 var bahayaTsunami = L.geoJSON(bahayaTsunami, {
   style: function (feature) {
@@ -413,6 +431,7 @@ var overlayLayers = {
   "Batas Desa": adminDesa,
   "Batas Kecamatan": adminKec,
   "Bahaya Tsunami": bahayaTsunami,
+  "Area Pemukiman": pemukiman,
 };
 
 map.addLayer(markers); // Add Shelter Evakuasi layer to the map initially
