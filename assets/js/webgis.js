@@ -156,7 +156,7 @@ var legend = L.control
         weight: 2,
       },
       {
-        label: "Bahaya Tsunami",
+        label: "Bahaya Tsunami dan Inundasi",
         type: "rectangle",
         color: "#ffffff",
         fillColor: "#ffffff",
@@ -422,6 +422,90 @@ var bahayaTsunami = L.geoJSON(bahayaTsunami, {
   },
 });
 
+// Polygon Inundasi Tsunami 5m
+var inundasi5m = L.geoJSON(inundasi5m, {
+  style: function (feature) {
+    // Memilih warna berdasarkan indeks fitur
+    if (feature.properties.Kelas === "Bahaya Tinggi") {
+      return { fillColor: "#ff2701", color: "#ff2701", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    } else if (feature.properties.Kelas === "Bahaya Sedang") {
+      return { fillColor: "#fff701", color: "#fff701", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    } else if (feature.properties.Kelas === "Bahaya Rendah") {
+      return { fillColor: "#169936", color: "#169936", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    }
+  },
+  onEachFeature: function (feature, layer) {
+    // Membuat konten popup kustom
+    var popupContent = "<p>" + feature.properties.Kelas + "</p>";
+
+    // Mengatur popup untuk setiap fitur
+    layer.bindPopup(popupContent);
+  },
+});
+
+// Polygon Inundasi Tsunami 10m
+var inundasi10m = L.geoJSON(inundasi10m, {
+  style: function (feature) {
+    // Memilih warna berdasarkan indeks fitur
+    if (feature.properties.Kelas === "Bahaya Tinggi") {
+      return { fillColor: "#ff2701", color: "#ff2701", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    } else if (feature.properties.Kelas === "Bahaya Sedang") {
+      return { fillColor: "#fff701", color: "#fff701", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    } else if (feature.properties.Kelas === "Bahaya Rendah") {
+      return { fillColor: "#169936", color: "#169936", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    }
+  },
+  onEachFeature: function (feature, layer) {
+    // Membuat konten popup kustom
+    var popupContent = "<p>" + feature.properties.Kelas + "</p>";
+
+    // Mengatur popup untuk setiap fitur
+    layer.bindPopup(popupContent);
+  },
+});
+
+// Polygon Inundasi Tsunami 15m
+var inundasi15m = L.geoJSON(inundasi15m, {
+  style: function (feature) {
+    // Memilih warna berdasarkan indeks fitur
+    if (feature.properties.Kelas === "Bahaya Tinggi") {
+      return { fillColor: "#ff2701", color: "#ff2701", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    } else if (feature.properties.Kelas === "Bahaya Sedang") {
+      return { fillColor: "#fff701", color: "#fff701", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    } else if (feature.properties.Kelas === "Bahaya Rendah") {
+      return { fillColor: "#169936", color: "#169936", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    }
+  },
+  onEachFeature: function (feature, layer) {
+    // Membuat konten popup kustom
+    var popupContent = "<p>" + feature.properties.Kelas + "</p>";
+
+    // Mengatur popup untuk setiap fitur
+    layer.bindPopup(popupContent);
+  },
+});
+
+// Polygon Inundasi Tsunami 20m
+var inundasi20m = L.geoJSON(inundasi20m, {
+  style: function (feature) {
+    // Memilih warna berdasarkan indeks fitur
+    if (feature.properties.Kelas === "Bahaya Tinggi") {
+      return { fillColor: "#ff2701", color: "#ff2701", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    } else if (feature.properties.Kelas === "Bahaya Sedang") {
+      return { fillColor: "#fff701", color: "#fff701", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    } else if (feature.properties.Kelas === "Bahaya Rendah") {
+      return { fillColor: "#169936", color: "#169936", weight: 0.1, opacity: 1, fillOpacity: 0.5 };
+    }
+  },
+  onEachFeature: function (feature, layer) {
+    // Membuat konten popup kustom
+    var popupContent = "<p>" + feature.properties.Kelas + "</p>";
+
+    // Mengatur popup untuk setiap fitur
+    layer.bindPopup(popupContent);
+  },
+});
+
 // --- Layer Control ---
 // Load data
 var overlayLayers = {
@@ -432,6 +516,10 @@ var overlayLayers = {
   "Batas Kecamatan": adminKec,
   "Bahaya Tsunami": bahayaTsunami,
   "Area Pemukiman": pemukiman,
+  "Inundasi 5 m": inundasi5m,
+  "Inundasi 10 m": inundasi10m,
+  "Inundasi 15 m": inundasi15m,
+  "Inundasi 20 m": inundasi20m,
 };
 
 map.addLayer(markers); // Add Shelter Evakuasi layer to the map initially
@@ -460,6 +548,17 @@ var leafletControlLayers = document.querySelector(".leaflet-control-layers-overl
 if (leafletControlLayers) {
   var firstChild = leafletControlLayers.firstChild;
   leafletControlLayers.insertBefore(headingElement, firstChild);
+
+    // Menambahkan h3 dengan teks "Inundasi Tsunami" setelah label ke-7
+    var inundasiHeading = document.createElement("h3");
+    inundasiHeading.textContent = "Inundasi Tsunami";
+  
+    // Temukan label ke-7 (Area Pemukiman)
+    var labels = leafletControlLayers.getElementsByTagName("label");
+    if (labels.length >= 7) {
+      var areaPemukimanLabel = labels[6]; // index 6 adalah label ke-7 karena index dimulai dari 0
+      areaPemukimanLabel.parentNode.insertBefore(inundasiHeading, areaPemukimanLabel.nextSibling);
+    }
 }
 
 // Ensure the initial checkbox state reflects the layers added
